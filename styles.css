@@ -1,0 +1,255 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; /* Cambiar a 'mandatory' para scroll automático */
+    overflow-y: scroll; /* Asegurar que se pueda hacer scroll hacia arriba */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #001f3f; /* Fondo azul marino */
+    color: white;
+    z-index: 1000;
+    padding: 20px; /* Aumentar altura del menú */
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+}
+
+.section {
+    height: calc(100vh - 80px); /* Ajustar la altura al tamaño de la pantalla menos la altura del menú */
+    scroll-snap-align: start;
+    padding-top: 80px; /* Ajustar el padding-top para evitar que el contenido se oculte */
+    box-sizing: border-box; /* Incluir padding y border en el tamaño total */
+}
+
+#inicio {
+    background: url('nunu.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: left; /* Alinear el texto a la izquierda */
+    display: flex;
+    justify-content: flex-start; /* Alinear el contenido al inicio */
+    align-items: flex-start; /* Alinear el contenido al inicio */
+    padding: 40px; /* Ajustar padding */
+    height: calc(100vh); /* Asegurar que la sección cubra toda la pantalla menos la altura del menú */
+}
+
+#inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecer la imagen */
+    z-index: 0;
+}
+
+#inicio header {
+    position: relative;
+    z-index: 1;
+    max-width: 800px; /* Limitar el ancho del contenido */
+    margin-left: 0; /* Alinear el contenido al borde izquierdo */
+}
+
+#inicio h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añadir sombra al texto */
+}
+
+#inicio h2 {
+    color: #d4af37; /* Oro desaturado */
+    font-size: 2em;
+    margin: 0.5em 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añadir sombra al texto */
+}
+
+#inicio p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0.5em 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Añadir sombra al texto */
+}
+
+.section:not(#inicio) { 
+    background-color: #001f3f; /* Azul marino */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header, section, article, footer {
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Aumentar padding */
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Añadir transición para el fondo */
+}
+
+nav a:hover {
+    color: #d4af37; /* Cambiar el color del texto a oro desaturado al poner el ratón encima */
+    background-color: rgba(2, 119, 189, 0.8); /* Añadir fondo al hover */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #b3e5fc;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+nav a:hover::after {
+    width: 80%;
+}
+article:hover {
+    transform: translateY(-5px);
+}
+
+/* Mantener los estilos originales del nav */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(2, 119, 189, 0.8);
+}
+
+/* Añadir animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.photo-selector {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Incluir padding y border en el tamaño total */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Ajustar la altura al tamaño de la pantalla menos la altura del menú */
+}
+
+.photo-selector .large-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.photo-selector .thumbnails {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.photo-selector .thumbnails img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-selector .thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.habilidades {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Incluir padding y border en el tamaño total */
+    height: calc(100vh - 80px); /* Ajustar la altura al tamaño de la pantalla menos la altura del menú */
+}
+
+.habilidades h2 {
+    color: #d4af37; /* Oro desaturado */
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+
+.habilidades .habilidad {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.habilidades .habilidad img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.habilidades .habilidad p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.footer-section {
+    height: auto; /* Permitir que el footer tenga altura automática */
+    scroll-snap-align: none; /* Desactivar el scroll-snap para el footer */
+    scroll-snap-stop: normal; /* Asegurar que el scroll no se detenga en el footer */
+}
+
+footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0; /* Eliminar el border-radius */
+    margin: 0; /* Eliminar el margin */
+}

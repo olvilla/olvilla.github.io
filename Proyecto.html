@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nunu & Willump - League of Legends</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body>
+    <!-- Eliminar el video de fondo -->
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#aspectos">Aspectos Disponibles</a></li>
+        </ul>
+    </nav>
+
+    <div class="section" id="inicio">
+        <header>
+            <h2>Un Niño y su Yeti</h2>
+            <h1>Nunu & Willump</h1>
+            <p>Había una vez un niño que quería acabar con un temible monstruo para demostrar que era un héroe; pero que terminó descubriendo que la bestia, un yeti solitario y mágico, solo necesitaba un amigo. Ahora, Nunu y Willump, unidos por un poder ancestral y por compartir el amor hacia las bolas de nieve, deambulan por todo Freljord dándole vida a aventuras imaginarias. Y mantienen la esperanza de que ahí fuera, en algún lugar, se encuentra la madre de Nunu, y que darán con ella. Si logran salvarla, puede que se conviertan en los héroes que siempre desearon ser.</p>
+        </header>
+    </div>
+
+    <div class="section habilidades" id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="habilidad">
+            <img src="consume.png" alt="Consume">
+            <p>Consume: Nunu muerde a un enemigo, infligiendo daño y curándose a sí mismo.</p>
+        </div>
+        <div class="habilidad">
+            <img src="snowball.png" alt="Ráfaga de bolas de nieve">
+            <p>Ráfaga de bolas de nieve: Nunu lanza bolas de nieve en rápida sucesión, ralentizando a los enemigos.</p>
+        </div>
+        <div class="habilidad">
+            <img src="bigger.png" alt="¡Más grande!">
+            <p>¡Más grande!: Willump ruge, aumentando su tamaño y velocidad de movimiento.</p>
+        </div>
+        <div class="habilidad">
+            <img src="giant_snowball.png" alt="¡Bola de nieve gigante!">
+            <p>¡Bola de nieve gigante!: Nunu y Willump crean una bola de nieve gigante que rueda hacia adelante, dañando y derribando a los enemigos.</p>
+        </div>
+        <div class="habilidad">
+            <img src="absolute_zero.png" alt="Cero absoluto">
+            <p>Cero absoluto: Nunu y Willump canalizan una poderosa tormenta de hielo, ralentizando y dañando a los enemigos en un área grande.</p>
+        </div>
+    </div>
+
+    <div class="section photo-selector" id="aspectos">
+        <h2>Aspectos Disponibles</h2>
+        <img src="Nunu.jpg" alt="Large Photo" class="large-photo" id="large-photo">
+        <div class="thumbnails">
+            <img src="Nunu.jpg" alt="Photo 1" onclick="changePhoto('Nunu.jpg')">
+            <img src="Nunu.jpg" alt="Photo 2" onclick="changePhoto('Nunu.jpg')">
+            <img src="Nunu.jpg" alt="Photo 3" onclick="changePhoto('Nunu.jpg')">
+            <img src="Nunu.jpg" alt="Photo 4" onclick="changePhoto('Nunu.jpg')">
+            <img src="Nunu.jpg" alt="Photo 5" onclick="changePhoto('Nunu.jpg')">
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <footer>
+            <p>&copy; 2023 Nunu & Willump. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript externo -->
+</body>
+</html>
