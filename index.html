@@ -3,85 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Nunu & Willump - League of Legends</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <title>Nunu & Willump</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <meta name="author" content="Luis Sedano">
 </head>
 <body>
-    <!-- Eliminar el video de fondo -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#aspectos">Aspectos Disponibles</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#aspectos">Aspectos Disponibles</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section id="inicio">
+            <header>
+                <h2>Un Niño y su Yeti</h2>
+                <h1>Nunu & Willump</h1>
+                <p>Había una vez un niño que quería acabar con un temible monstruo para demostrar que era un héroe; pero que terminó descubriendo que la bestia, un yeti solitario y mágico, solo necesitaba un amigo. Ahora, Nunu y Willump, unidos por un poder ancestral y por compartir el amor hacia las bolas de nieve, deambulan por todo Freljord dándole vida a aventuras imaginarias. Y mantienen la esperanza de que ahí fuera, en algún lugar, se encuentra la madre de Nunu, y que darán con ella. Si logran salvarla, puede que se conviertan en los héroes que siempre desearon ser.</p>
+            </header>
+        </section>
 
-    <div class="section" id="inicio">
-        <header>
-            <h2>Un Niño y su Yeti</h2>
-            <h1>Nunu & Willump</h1>
-            <p>Había una vez un niño que quería acabar con un temible monstruo para demostrar que era un héroe; pero que terminó descubriendo que la bestia, un yeti solitario y mágico, solo necesitaba un amigo. Ahora, Nunu y Willump, unidos por un poder ancestral y por compartir el amor hacia las bolas de nieve, deambulan por todo Freljord dándole vida a aventuras imaginarias. Y mantienen la esperanza de que ahí fuera, en algún lugar, se encuentra la madre de Nunu, y que darán con ella. Si logran salvarla, puede que se conviertan en los héroes que siempre desearon ser.</p>
-        </header>
-    </div>
-
-    <div class="section abilities-section" id="habilidades">
-        <div class="abilities-left">
+        <section id="habilidades">
             <h1>Habilidades</h1>
-            <div class="abilities-row">
-                <div class="ability" onclick="showAbilityDetails('llamada_freljord.mp4', 'Una habilidad pasiva que proporciona un pequeño escudo a Nunu & Willump.', 'Llamada de Freljord', 'Pasiva')">
-                    <img src="llamada_freljord.png" alt="Llamada de Freljord">
+            <div class="habilidades-fotos">
+                <div class="habilidad">
+                    <a href="habilidades/llamada_freljord.html">
+                        <img src="images/llamada_freljord.png" alt="Llamada de Freljord">
+                    </a>
                     <p>Llamada de Freljord</p>
                 </div>
-                <div class="ability" onclick="showAbilityDetails('voracidad.mp4', 'Nunu & Willump consumen un súbdito o monstruo enemigo, ganando una acumulación de Consume. Cuando se obtienen un cierto número de acumulaciones, el siguiente ataque infligirá daño adicional.', 'Voracidad', 'Q')">
-                    <img src="voracidad.png" alt="Voracidad">
+                <div class="habilidad">
+                    <a href="habilidades/voracidad.html">
+                        <img src="images/voracidad.png" alt="Voracidad">
+                    </a>
                     <p>Voracidad</p>
                 </div>
-                <div class="ability" onclick="showAbilityDetails('bola_mas_grande.mp4', 'Nunu & Willump ruedan una bola de nieve gigante, infligiendo daño a los enemigos en el camino.', '¡La Bola Más Grande de la Historia!', 'W')">
-                    <img src="bola_mas_grande.png" alt="¡La Bola Más Grande de la Historia!">
+                <div class="habilidad">
+                    <a href="habilidades/bola_mas_grande.html">
+                        <img src="images/bola_mas_grande.png" alt="¡La Bola Más Grande de la Historia!">
+                    </a>
                     <p>¡La Bola Más Grande de la Historia!</p>
                 </div>
-                <div class="ability" onclick="showAbilityDetails('alud_bolas.mp4', 'Nunu & Willump lanzan una serie de bolas de nieve que infligen daño a los enemigos. Cuando la habilidad termina, Willump inmoviliza a todos los campeones y monstruos grandes que fueron golpeados por las bolas de nieve.', 'Alud de Bolas', 'E')">
-                    <img src="alud_bolas.png" alt="Alud de Bolas">
+                <div class="habilidad">
+                    <a href="habilidades/alud_bolas.html">
+                        <img src="images/alud_bolas.png" alt="Alud de Bolas">
+                    </a>
                     <p>Alud de Bolas</p>
                 </div>
-                <div class="ability" onclick="showAbilityDetails('cero_absoluto.mp4', 'Nunu & Willump crean una gran área de efecto a su alrededor que inflige daño con el tiempo a los enemigos.', 'Cero Absoluto', 'R')">
-                    <img src="cero_absoluto.png" alt="Cero Absoluto">
+                <div class="habilidad">
+                    <a href="habilidades/cero_absoluto.html">
+                        <img src="images/cero_absoluto.png" alt="Cero Absoluto">
+                    </a>
                     <p>Cero Absoluto</p>
                 </div>
             </div>
-        </div>
-        <div class="abilities-right">
-            <div class="ability-details">
-                <video id="ability-video" autoplay muted loop>
-                    <source src="llamada_freljord.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h2 id="ability-name">Llamada de Freljord</h2>
-                <h3 id="ability-type">Pasiva</h3>
-                <p id="ability-description">Una habilidad pasiva que proporciona un pequeño escudo a Nunu & Willump.</p>
+        </section>
+
+        <section id="aspectos">
+            <h2>Aspectos Disponibles</h2>
+            <div class="miniaturas">
+                <img src="images/Nunu.jpg" alt="Nunu y Willump">
+                <img src="images/Nunu_1.jpg" alt="Nunu y Willump piegrande">
+                <img src="images/Nunu_2.jpg" alt="Nunu y Willump taller">
+                <img src="images/Nunu_4.jpg" alt="Nunu y Willump bot">
+                <img src="images/Nunu_44.jpg" alt="Nunun y Willump noche de miedo">
+                <img src="images/Nunu_26.jpg" alt="Nunun y Abejillump">
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <div class="section photo-selector" id="aspectos">
-        <h2>Aspectos Disponibles</h2>
-        <img src="Nunu.jpg" alt="Large Photo" class="large-photo" id="large-photo">
-        <div class="thumbnails">
-            <img src="Nunu_1.jpg" alt="Photo 1" onclick="changePhoto('Nunu_1.jpg')">
-            <img src="Nunu_2.jpg" alt="Photo 2" onclick="changePhoto('Nunu_2.jpg')">
-            <img src="Nunu_4.jpg" alt="Photo 3" onclick="changePhoto('Nunu_4.jpg')">
-            <img src="Nunu_44.jpg" alt="Photo 4" onclick="changePhoto('Nunu_44.jpg')">
-            <img src="Nunu_26.jpg" alt="Photo 5" onclick="changePhoto('Nunu_26.jpg')">
-        </div>
-    </div>
-
-    <div class="footer-section">
-        <footer>
-            <p>&copy; 2023 Nunu & Willump. Todos los derechos reservados.</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script> <!-- Enlace al archivo JavaScript externo -->
+    <footer>
+        <p>&copy; 2025 Nunu & Willump. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

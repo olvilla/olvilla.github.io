@@ -1,0 +1,64 @@
+body {
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.habilidad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 31, 63, 0.9); /* Dark blue semi-transparent background */
+    color: #fff;
+    height: 90vh; /* Reduce height to fit content better */
+    width: 80%; /* Reduce width */
+    max-width: 800px; /* Set a maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px auto; /* Center horizontally */
+}
+
+.habilidad-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #d4af37; /* Gold color */
+}
+
+.habilidad-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #b0c4de; /* Light steel blue color */
+}
+
+.habilidad-container video {
+    width: 70%;
+    max-width: 700px;
+    margin-bottom: 10px;
+    border: 2px solid #d4af37; /* Gold border */
+    border-radius: 10px;
+}
+
+.habilidad-container p {
+    font-size: 1em;
+    line-height: 1.4;
+    max-width: 700px;
+    margin-bottom: 10px;
+}
+
+.habilidad-container button {
+    background-color: #d4af37; /* Gold color */
+    color: #001f3f; /* Dark blue text */
+    border: none;
+    padding: 12px 24px; /* Increase padding for larger button */
+    font-size: 1em; /* Increase font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.habilidad-container button:hover {
+    background-color: #b8860b; /* Dark goldenrod color */
+}

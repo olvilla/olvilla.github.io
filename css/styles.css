@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #001f3f;
+    z-index: 1000;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(2, 119, 189, 0.8);
+}
+
+/* Section Styles */
+.seccion {
+    height: calc(100vh - 80px);
+    padding-top: 80px;
+    box-sizing: border-box;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Inicio Section */
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Nunu.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#inicio h1, #inicio h2, #inicio p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#inicio h1 {
+    font-size: 4em;
+    margin: 0.5em 0;
+}
+
+#inicio h2 {
+    color: #d4af37;
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+#inicio p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0.5em 0;
+}
+
+/* Habilidades Section */
+#habilidades {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: calc(110vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.habilidades-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.habilidad {
+    text-align: center;
+    cursor: pointer;
+    flex: 1 1 15%;
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.habilidad img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.habilidad img:hover {
+    transform: scale(1.1);
+}
+
+.habilidad p {
+    font-size: 1.3em;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+/* Selector de Fotos Section */
+#aspectos {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+#aspectos h2 {
+    color: #333;
+}
+
+.miniaturas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.miniaturas img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Section */
+footer {
+    height: auto;
+    background-color: #001f3f;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
