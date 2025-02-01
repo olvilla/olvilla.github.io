@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Nunu & Willump - League of Legends</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
 </head>
@@ -25,27 +25,42 @@
         </header>
     </div>
 
-    <div class="section habilidades" id="habilidades">
-        <h2>Habilidades</h2>
-        <div class="habilidad">
-            <img src="consume.png" alt="Consume">
-            <p>Consume: Nunu muerde a un enemigo, infligiendo daño y curándose a sí mismo.</p>
+    <div class="section abilities-section" id="habilidades">
+        <div class="abilities-left">
+            <h1>Habilidades</h1>
+            <div class="abilities-row">
+                <div class="ability" onclick="showAbilityDetails('llamada_freljord.mp4', 'Una habilidad pasiva que proporciona un pequeño escudo a Nunu & Willump.', 'Llamada de Freljord', 'Pasiva')">
+                    <img src="llamada_freljord.png" alt="Llamada de Freljord">
+                    <p>Llamada de Freljord</p>
+                </div>
+                <div class="ability" onclick="showAbilityDetails('voracidad.mp4', 'Nunu & Willump consumen un súbdito o monstruo enemigo, ganando una acumulación de Consume. Cuando se obtienen un cierto número de acumulaciones, el siguiente ataque infligirá daño adicional.', 'Voracidad', 'Q')">
+                    <img src="voracidad.png" alt="Voracidad">
+                    <p>Voracidad</p>
+                </div>
+                <div class="ability" onclick="showAbilityDetails('bola_mas_grande.mp4', 'Nunu & Willump ruedan una bola de nieve gigante, infligiendo daño a los enemigos en el camino.', '¡La Bola Más Grande de la Historia!', 'W')">
+                    <img src="bola_mas_grande.png" alt="¡La Bola Más Grande de la Historia!">
+                    <p>¡La Bola Más Grande de la Historia!</p>
+                </div>
+                <div class="ability" onclick="showAbilityDetails('alud_bolas.mp4', 'Nunu & Willump lanzan una serie de bolas de nieve que infligen daño a los enemigos. Cuando la habilidad termina, Willump inmoviliza a todos los campeones y monstruos grandes que fueron golpeados por las bolas de nieve.', 'Alud de Bolas', 'E')">
+                    <img src="alud_bolas.png" alt="Alud de Bolas">
+                    <p>Alud de Bolas</p>
+                </div>
+                <div class="ability" onclick="showAbilityDetails('cero_absoluto.mp4', 'Nunu & Willump crean una gran área de efecto a su alrededor que inflige daño con el tiempo a los enemigos.', 'Cero Absoluto', 'R')">
+                    <img src="cero_absoluto.png" alt="Cero Absoluto">
+                    <p>Cero Absoluto</p>
+                </div>
+            </div>
         </div>
-        <div class="habilidad">
-            <img src="snowball.png" alt="Ráfaga de bolas de nieve">
-            <p>Ráfaga de bolas de nieve: Nunu lanza bolas de nieve en rápida sucesión, ralentizando a los enemigos.</p>
-        </div>
-        <div class="habilidad">
-            <img src="bigger.png" alt="¡Más grande!">
-            <p>¡Más grande!: Willump ruge, aumentando su tamaño y velocidad de movimiento.</p>
-        </div>
-        <div class="habilidad">
-            <img src="giant_snowball.png" alt="¡Bola de nieve gigante!">
-            <p>¡Bola de nieve gigante!: Nunu y Willump crean una bola de nieve gigante que rueda hacia adelante, dañando y derribando a los enemigos.</p>
-        </div>
-        <div class="habilidad">
-            <img src="absolute_zero.png" alt="Cero absoluto">
-            <p>Cero absoluto: Nunu y Willump canalizan una poderosa tormenta de hielo, ralentizando y dañando a los enemigos en un área grande.</p>
+        <div class="abilities-right">
+            <div class="ability-details">
+                <video id="ability-video" autoplay muted loop>
+                    <source src="llamada_freljord.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h2 id="ability-name">Llamada de Freljord</h2>
+                <h3 id="ability-type">Pasiva</h3>
+                <p id="ability-description">Una habilidad pasiva que proporciona un pequeño escudo a Nunu & Willump.</p>
+            </div>
         </div>
     </div>
 
@@ -53,11 +68,11 @@
         <h2>Aspectos Disponibles</h2>
         <img src="Nunu.jpg" alt="Large Photo" class="large-photo" id="large-photo">
         <div class="thumbnails">
-            <img src="Nunu.jpg" alt="Photo 1" onclick="changePhoto('Nunu.jpg')">
-            <img src="Nunu.jpg" alt="Photo 2" onclick="changePhoto('Nunu.jpg')">
-            <img src="Nunu.jpg" alt="Photo 3" onclick="changePhoto('Nunu.jpg')">
-            <img src="Nunu.jpg" alt="Photo 4" onclick="changePhoto('Nunu.jpg')">
-            <img src="Nunu.jpg" alt="Photo 5" onclick="changePhoto('Nunu.jpg')">
+            <img src="Nunu_1.jpg" alt="Photo 1" onclick="changePhoto('Nunu_1.jpg')">
+            <img src="Nunu_2.jpg" alt="Photo 2" onclick="changePhoto('Nunu_2.jpg')">
+            <img src="Nunu_4.jpg" alt="Photo 3" onclick="changePhoto('Nunu_4.jpg')">
+            <img src="Nunu_44.jpg" alt="Photo 4" onclick="changePhoto('Nunu_44.jpg')">
+            <img src="Nunu_26.jpg" alt="Photo 5" onclick="changePhoto('Nunu_26.jpg')">
         </div>
     </div>
 
