@@ -33,7 +33,7 @@ nav {
 }
 
 #inicio {
-    background: url(Nunu.jpg) no-repeat center center; /* Asegurar la ruta correcta de la imagen */
+    background: url(Nunu.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
     color: white;
